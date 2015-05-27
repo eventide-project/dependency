@@ -1,4 +1,4 @@
-require 'null_attr'
+require 'subst_attr'
 
 require 'dependency/macro'
 require 'dependency/activate'
