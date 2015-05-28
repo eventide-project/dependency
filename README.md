@@ -92,3 +92,7 @@ class Example
   dependency :some_attr
 end
 ```
+
+## License
+
+The `dependency` library is released under the [MIT License](https://github.com/obsidian-btc/dependency/blob/master/MIT-License.txt).
