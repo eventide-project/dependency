@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.name = 'dependency'
   s.summary = 'Declare dependencies that have null object default values'
-  s.version = '0.0.0'
+  s.version = '0.1.0'
   s.authors = ['']
   s.require_paths = ['lib']
   s.files = Dir.glob('{lib}/**/*')
