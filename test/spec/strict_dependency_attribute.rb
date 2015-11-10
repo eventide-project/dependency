@@ -1,3 +1,5 @@
+require_relative 'spec_init'
+
 module StrictDependencyAttribute
   class SomeDependency
     def a_method; end
@@ -14,11 +16,11 @@ describe StrictDependencyAttribute::Example do
   context "Dependency attribute with a strict null object value" do
 
     specify "The dependency doesn't respond to methods not on the impersonated interface" do
-      expect { subject.some_dependency.some_method }.to raise_error
+      assert_raises { subject.some_dependency.some_method }
     end
 
     specify "The dependency responds to methods on the impersonated interface" do
-      expect { subject.some_dependency.a_method }.to_not raise_error
+      assert_raises { subject.some_dependency.a_method }
     end
   end
 end
