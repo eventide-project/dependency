@@ -8,10 +8,15 @@ module WeakDependencyAttribute
   end
 end
 
-describe WeakDependencyAttribute::Example do
+context WeakDependencyAttribute::Example do
   context "Dependency attribute with a weak null object value" do
-    specify "The dependency responds to any method" do
-      assert_raises { subject.some_dependency.some_method }
+    test "The dependency responds to any method" do
+      begin
+        subject.some_dependency.some_method
+      rescue => error
+      end
+
+      assert error
     end
   end
 end
