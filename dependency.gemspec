@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
 
   s.authors = ['The Eventide Project']
   s.email = 'opensource@eventide-project.org'
-  s.homepage = 'https://github.com/obsidian-btc/dependency'
+  s.homepage = 'https://github.com/eventide-project/dependency'
   s.licenses = ['MIT']
 
   s.require_paths = ['lib']
