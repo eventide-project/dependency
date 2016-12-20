@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
-  s.name = 'dependency'
+  s.name = 'evt-dependency'
   s.version = '0.1.0.0'
   s.summary = 'Declare dependencies that have null object or substitute default values'
   s.description = ' '
