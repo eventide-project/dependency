@@ -8,7 +8,7 @@ module WeakDependencyAttribute
   end
 end
 
-context WeakDependencyAttribute::Example do
+context "Weak Dependency" do
   context "Dependency attribute with a weak null object value" do
     test "The dependency responds to any method" do
       begin

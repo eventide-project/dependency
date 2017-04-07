@@ -11,7 +11,7 @@ module ActivatedClass
   end
 end
 
-context ActivatedClass::Example do
+context "Activated Class" do
   context "NullAddr is activated for a specific class" do
     test "The class is a NullAttr" do
       assert(ActivatedClass::Example.is_a? Dependency::Macro)

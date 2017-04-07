@@ -4,7 +4,7 @@ module ActivatedObjectClass
   Dependency.activate
 end
 
-context ActivatedObjectClass do
+context "Activated Object's Class" do
   context "Dependency is not activated for a specific class" do
     test "Dependency is activated for the Object class" do
       assert(Object.is_a? Dependency::Macro)
