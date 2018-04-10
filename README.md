@@ -37,11 +37,9 @@ e.some_method # => No error raised
 e.anything # => NoMethodError is raised
 ```
 
-### A Strict Null Object that Provides a Specialized Null Object
+## Specialized Substitute
 
-If the class used to define the null object's strict interface has an inner `NullObject` namespace that has a `build` method, the null object will be the object returned from that build method.
-
-_NOTE: Use this if a custom null object implementation is needed._
+If the class used to define the null object's strict interface has an inner `Substitute` namespace that has a `build` method, the null object will be the object returned from that build method.
 
 ```ruby
 class SomeDependency
@@ -49,7 +47,7 @@ class SomeDependency
     # ...
   end
 
-  module NullObject
+  module Substitute
     def self.build
       SomeOtherNullObjectLibrary.etc
     end
@@ -68,7 +66,6 @@ e = Example.new
 The `Dependency` module must be included in a class that will use the `dependency` macro.
 
 However, the `Dependency` module can be included anywhere within the object hierarchy by using the `Dependency.activate` method.
-
 
 ```Ruby
 class Example
