@@ -14,7 +14,7 @@ class Example
 end
 
 e = Example.new
-e.anything # => No error raised
+e.some_attr.anything # => No error raised
 ```
 
 ### A Strict Null Object
@@ -33,8 +33,8 @@ class Example
 end
 
 e = Example.new
-e.some_method # => No error raised
-e.anything # => NoMethodError is raised
+e.some_attr.some_method # => No error raised
+e.some_attr.anything # => NoMethodError is raised
 ```
 
 ## Specialized Substitute
