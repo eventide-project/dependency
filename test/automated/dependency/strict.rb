@@ -2,7 +2,7 @@ require_relative '../automated_init'
 
 context "Dependency" do
   context "Strict" do
-    example = SubstAttr::Controls::Example.build
+    example = Dependency::Controls::Example.build
 
     context "Invoking Methods Not Implemented on the Impersonated Class" do
       test "Is an error" do
