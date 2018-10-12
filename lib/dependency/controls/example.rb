@@ -1,7 +1,7 @@
 module Dependency
   module Controls
     class Example
-      ::Dependency.activate(self)
+      include ::Dependency
 
       dependency :some_attr, Dependency::Example
 

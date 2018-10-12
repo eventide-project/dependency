@@ -1,6 +1,6 @@
 require_relative '../automated_init'
 
-context "Activate" do
+context "Activation" do
   context "Dependency is activated by default for the Object class" do
     unchanged_object_class = Object.clone
 
