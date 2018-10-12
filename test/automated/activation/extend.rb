@@ -5,7 +5,7 @@ context "Activation" do
     cls = Controls::Extended::Example
 
     test "The class includes the dependency macro" do
-      assert(cls.is_a?(Dependency::Macro))
+      assert(cls.respond_to?(:dependency))
     end
   end
 end
