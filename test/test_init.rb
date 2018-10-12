@@ -10,3 +10,5 @@ require 'test_bench'; TestBench.activate
 require 'pp'
 
 require 'dependency/controls'
+
+Controls = Dependency::Controls

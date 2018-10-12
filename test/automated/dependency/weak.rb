@@ -2,7 +2,7 @@ require_relative '../automated_init'
 
 context "Dependency" do
   context "Weak" do
-    example = Dependency::Controls::Example.build
+    example = Controls::Example.build
 
     context "Invoking Methods Not Implemented" do
       test "Is not an error" do

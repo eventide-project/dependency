@@ -1,8 +1,8 @@
 require_relative '../automated_init'
 
 context "Replace an Attribute with its Substitute" do
-  example = Dependency::Controls::Example.build
-  assert(example.some_attr.is_a?(Dependency::Controls::Dependency::Example))
+  example = Controls::Example.build
+  assert(example.some_attr.is_a?(Controls::Dependency::Example))
 
   Dependency::Substitute.(:some_attr, example)
 
