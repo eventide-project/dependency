@@ -6,11 +6,10 @@ context "Dependency" do
 
     context "Invoking Methods Not Implemented" do
       test "Is not an error" do
-        refute proc { example.weak_attr.some_method } do
-          raises_error? NoMethodError
+        refute_raises NoMethodError do
+          example.weak_attr.some_method
         end
       end
     end
   end
 end
-
