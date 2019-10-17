@@ -6,7 +6,7 @@ context "Dependency" do
 
     context "Invoking Methods Not Implemented" do
       test "Is not an error" do
-        refute_raises NoMethodError do
+        refute_raises(NoMethodError) do
           example.weak_attr.some_method
         end
       end
