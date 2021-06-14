@@ -8,7 +8,7 @@ context "Replace an Attribute with its Substitute" do
     Dependency::Substitute.(:some_attr, example)
 
     test "Attribute is replaced with its substitute" do
-      assert(example.some_attr == :some_substutute)
+      assert(example.some_attr == :some_substitute)
     end
   end
 end
