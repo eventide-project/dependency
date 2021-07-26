@@ -3,9 +3,11 @@ module Dependency
     class Example
       include ::Dependency
 
-      dependency :some_attr, Dependency::Example
+      dependency :specialized_substitute_attr, Dependency::Example
 
-      dependency :weak_attr
+      dependency :strict_substitute_attr, Dependency::NoSubstitute::Example
+
+      dependency :weak_substitute_attr
 
       def self.build
         new.tap do |instance|
