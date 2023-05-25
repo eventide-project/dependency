@@ -1,6 +1,6 @@
 # Dependency
 
-Dependency declaration with default substitute value
+Declare dependency attributes that have default implementations that are diagnostic substitutes or null objects.
 
 ## Overview
 
