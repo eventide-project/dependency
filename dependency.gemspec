@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name = 'evt-dependency'
-  s.version = '2.1.0.0'
-  s.summary = 'Declare dependencies that have null object or substitute default values'
+  s.version = '2.2.0.0'
+  s.summary = 'Declare dependency attributes that have default implementations that are diagnostic substitutes or null objects'
   s.description = ' '
 
   s.authors = ['The Eventide Project']
