@@ -226,4 +226,4 @@ end
 
 ## License
 
-The `dependency` library is released under the [MIT License](https://github.com/obsidian-btc/dependency/blob/master/MIT-License.txt).
+The `dependency` library is released under the [MIT License](https://github.com/eventide-project/dependency/blob/master/MIT-License.txt).
