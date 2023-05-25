@@ -3,11 +3,13 @@ module Dependency
     class Example
       include ::Dependency
 
-      dependency :specialized_substitute_attr, Dependency::Example
+      dependency :null_object_substitute_attr
 
-      dependency :strict_substitute_attr, Dependency::NoSubstitute::Example
+      dependency :mimic_substitute_attr, Dependency::NoSubstituteModule::Example
+      dependency :no_recorder_mimic_substitute_attr, Dependency::NoSubstituteModule::Example, record: false
+      dependency :mixed_in_mimic_substitute_attr, Dependency::MixinSubstitute::Example
 
-      dependency :weak_substitute_attr
+      dependency :constructed_substitute_attr, Dependency::Example
 
       def self.build
         new.tap do |instance|
