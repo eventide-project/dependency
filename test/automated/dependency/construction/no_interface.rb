@@ -11,7 +11,7 @@ context "Dependency" do
       comment "Ancestors: #{ancestry.inspect}"
 
       test "Creates null object" do
-        assert(substitute.class == SubstAttr::Substitute::NullObject::Implementation)
+        assert(substitute.class == SubstAttr::Substitute::NullObject)
       end
     end
   end
