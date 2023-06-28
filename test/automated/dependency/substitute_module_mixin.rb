@@ -9,7 +9,7 @@ context "Dependency" do
     detail "Substitute: #{substitute.inspect}"
     detail "Substitute Ancestors: #{substitute.class.ancestors.inspect}"
 
-    context "No substitute module constructor" do
+    context "No Substitute Module Constructor" do
       has_constructor = Controls::Dependency::MixinSubstitute::Example::Substitute.methods.include?(:build)
 
       test do
@@ -17,7 +17,7 @@ context "Dependency" do
       end
     end
 
-    context "Substitute module is mixed in" do
+    context "Substitute Module Is Mixed In" do
       substitute_module_mixed_in = substitute.is_a?(Controls::Dependency::MixinSubstitute::Example::Substitute)
 
       test do
