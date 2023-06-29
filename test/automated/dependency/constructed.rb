@@ -1,7 +1,7 @@
 require_relative '../automated_init'
 
 context "Dependency" do
-  context "constructed Substitute" do
+  context "Constructed Substitute" do
     example = Controls::Example.new
 
     test do
