@@ -105,8 +105,7 @@ class Example
 end
 ```
 
-For more information about invocation recording, see the Mimic library's documentation:
-[https://github.com/eventide-project/mimic#recording-invocations-of-a-mimic-object](https://github.com/eventide-project/mimic#recording-invocations-of-a-mimic-object)
+For more information about invocation recording, see the [Mimic library's documentation](https://github.com/eventide-project/mimic#recording-invocations-of-a-mimic-object).
 
 ### Specialized Mimic
 
@@ -133,9 +132,11 @@ e = Example.new
 e.some_dependency.some_other_method
 ```
 
-#### Specialized Mimic with Invocation Predicates
+#### Specialized Mimic with Invocation Recording and Predicates
 
-The principle use of the inner `Substitute` module mixin is the declaration of specialized predicates using the `Mimic` library's `Mimic::Recorder::Predicate` module and its `predicate` macro.
+The principle use of the inner `Substitute` module mixin is the definition of override methods that record their invocations, as well as the definition of domain-specific predicate methods that provide an applicative API for determining whether a substitute was actuated.
+
+Including the `RecordInvocation` module allows a substitute's methods to be defined as recordable.
 
 ```ruby
 class SomeClass
@@ -146,19 +147,32 @@ class SomeClass
   module Substitute
     include Mimic::Recorder::Predicate
 
-    predicate :some_method_invoked?, method_name: :some_method
+    record def some_method
+      # Substitute implementation
+    end
+
+    def some_predicate?
+      invoked?(:some_method)
+    end
   end
 end
 
 class Example
   dependency :some_dependency, SomeClass
+
+  def call
+    some_dependency.some_method
+  end
 end
 
 e = Example.new
-e.some_dependency.some_method
+e.()
 
-e.some_method_invoked? #=> true
+e.dependency.some_predicate?
+#=> true
 ```
+
+For more information about invocation recording, see the [RecordInvocation library's documentation](https://github.com/eventide-project/record-invocation) and the [Mimic library's documentation](https://github.com/eventide-project/mimic#recording-invocations-of-a-mimic-object).
 
 ### Constructed Substitute
 
