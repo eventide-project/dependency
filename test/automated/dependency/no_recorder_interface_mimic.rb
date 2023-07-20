@@ -14,7 +14,7 @@ context "Dependency" do
 
     context "Recording" do
       test "Mimic is not a recorder" do
-        refute(example.no_recorder_mimic_substitute_attr.is_a? Mimic::Recorder)
+        refute(example.no_recorder_mimic_substitute_attr.is_a?(RecordInvocation))
       end
     end
   end
