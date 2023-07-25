@@ -201,6 +201,18 @@ e = Example.new
 e.some_dependency #=> SomeOtherSubstitute
 ```
 
+### Constructing and Testing a Substitute
+
+The Dependency library offers a single utility to construct any substitute of a dependency, whether it be a null object, a static mimic, or a constructed dependency.
+
+``` ruby
+some_class_substitute_instance = Dependency::Substitute.build(SomeClass)
+```
+
+This constructor will return an instance of whichever kind of substitute that is defined by the class passed to it.
+
+The most common use for this utility is the construction of diagnostic substitute directly within a test script to test any specialized behavior that the substitute may have.
+
 ## Activation
 
 The `Dependency` module must be included in a class that will use the `dependency` macro.
