@@ -22,7 +22,7 @@ class Example
 end
 
 e = Example.new
-e.dependency.nil? #=> false
+e.some_dependency.nil? #=> false
 ```
 
 To construct an object and provide its dependencies with real, _operational_ values, implement a constructor method that will be used by operational code.
@@ -40,11 +40,11 @@ end
 
 # Non-operational, substitute dependencies when the instance has only been initialized
 e = Example.new
-e.dependency.class #=> NullObject
+e.some_dependency.class #=> NullObject
 
 # Operational dependencies when the instance has been fully constructed
 e = Example.build
-e.dependency.class #=> SomeDependency
+e.some_dependency.class #=> SomeDependency
 ```
 
 ## Substitutes
@@ -168,7 +168,7 @@ end
 e = Example.new
 e.()
 
-e.dependency.some_predicate?
+e.some_dependency.some_predicate?
 #=> true
 ```
 
